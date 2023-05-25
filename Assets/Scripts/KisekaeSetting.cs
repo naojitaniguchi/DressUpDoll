@@ -10,8 +10,8 @@ public class KisekaeSetting : MonoBehaviour
     {
         HAIR,
         BODY,
-        UPPER,
-        BOTTOM,
+        FACE,
+        CLOTHES,
         SHOES,
         PARTS_MAX
     }

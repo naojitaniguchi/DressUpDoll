@@ -6,8 +6,8 @@ public class KisekaeManager : MonoBehaviour
 {
     [SerializeField] GameObject Hair;
     [SerializeField] GameObject Body;
-    [SerializeField] GameObject Upper;
-    [SerializeField] GameObject Bottom;
+    [SerializeField] GameObject Face;
+    [SerializeField] GameObject Clothes;
     [SerializeField] GameObject Shoes;
 
     // Start is called before the first frame update
@@ -17,8 +17,8 @@ public class KisekaeManager : MonoBehaviour
         {
             select(Hair, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.HAIR]);
             select(Body, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.BODY]);
-            select(Upper, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.UPPER]);
-            select(Bottom, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.BOTTOM]);
+            select(Face, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.FACE]);
+            select(Clothes, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.CLOTHES]);
             select(Shoes, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.SHOES]);
         }
         
@@ -42,16 +42,16 @@ public class KisekaeManager : MonoBehaviour
         KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.BODY, selected);
     }
 
-    public void selectUpper(int selected)
+    public void selectFace(int selected)
     {
-        select(Upper, selected);
-        KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.UPPER, selected);
+        select(Face, selected);
+        KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.FACE, selected);
     }
 
-    public void selectBottom(int selected)
+    public void selectClothes(int selected)
     {
-        select(Bottom, selected);
-        KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.BOTTOM, selected);
+        select(Clothes, selected);
+        KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.CLOTHES, selected);
     }
 
     public void selectShoes(int selected)
