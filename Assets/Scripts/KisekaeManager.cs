@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KisekaeManager : MonoBehaviour
 {
+    [SerializeField] GameObject Accessories;
     [SerializeField] GameObject Hair;
     [SerializeField] GameObject Body;
     [SerializeField] GameObject Face;
@@ -15,6 +16,7 @@ public class KisekaeManager : MonoBehaviour
     {
         if (KisekaeSetting.instance != null)
         {
+            select(Accessories, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.ACCESSORIES]);
             select(Hair, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.HAIR]);
             select(Body, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.BODY]);
             select(Face, KisekaeSetting.instance.indexes[(int)KisekaeSetting.PARTS_TYPE.FACE]);
@@ -28,6 +30,12 @@ public class KisekaeManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void selectAccessories(int selected)
+    {
+        select(Accessories, selected);
+        KisekaeSetting.instance.setIndex(KisekaeSetting.PARTS_TYPE.ACCESSORIES, selected);
     }
 
     public void selectHair( int selected)

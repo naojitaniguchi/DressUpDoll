@@ -8,6 +8,7 @@ public class KisekaeSetting : MonoBehaviour
 
     public enum PARTS_TYPE
     {
+        ACCESSORIES,
         HAIR,
         BODY,
         FACE,
